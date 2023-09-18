@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ConvertNewWord {
+public class ConvertWord {
     private final ArrayList<String> hiddenWordArray = new ArrayList<>();
     private final ArrayList<String> wordArray = new ArrayList<>();
     public ArrayList<String> convertToUnderscore(String word){

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="993fcf1e-64ce-4a2d-a9f0-5ff868dfe755" name="Changes" comment="Added words list, and functionality to display blanks">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ConvertNewWord.java" afterDir="false" />
+    <list default="true" id="993fcf1e-64ce-4a2d-a9f0-5ff868dfe755" name="Changes" comment="Updated ValidateGuess to allow for multiple occurrences">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayNewWord.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ValidateGuess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ValidateGuess.java" afterDir="false" />
     </list>
@@ -75,7 +72,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694788849580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated ValidateGuess to allow for multiple occurrences">
+      <option name="closed" value="true" />
+      <created>1695048652860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695048652860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added words list, and functionality to display blanks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added words list, and functionality to display blanks" />
+    <MESSAGE value="Updated ValidateGuess to allow for multiple occurrences" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ValidateGuess to allow for multiple occurrences" />
   </component>
 </project>
