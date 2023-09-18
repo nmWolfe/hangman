@@ -8,6 +8,7 @@ public class HangMan {
     private final ConvertWord converter;
     private final int maxAttempts = 7;
     private int attempts = 0;
+    private boolean playing = true;
 
     public HangMan() {
         this.scanner = new Scanner(System.in);
@@ -17,27 +18,23 @@ public class HangMan {
 
     public void startGame() {
 
-        String[] gameStart = {
-                "1 - Play a game of HangMan",
-                "2 - Quit"
-        };
-
+        PlayerInteraction playerInteraction = new PlayerInteraction();
+        Results results = new Results();
+        ArrayList<String> hiddenWordArr = converter.convertToUnderscore(word);
+        ArrayList<String> wordArray = converter.convertWordToArray(word);
 
         System.out.println("\n");
         System.out.println("*************** Welcome to Hangman ***************");
 
-        while (true) {
-            for (String option : gameStart) {
-                System.out.println(option);
-            }
+        while (playing) {
+
+            playerInteraction.showStartOptions();
             String playerChoice = scanner.nextLine();
+
             if (playerChoice.equals("1")) {
 
-                ArrayList<String> hiddenWordArr = converter.convertToUnderscore(word);
-                ArrayList<String> wordArray = converter.convertWordToArray(word);
-
                 System.out.println("Ok, let's play. ");
-                System.out.println(String.join("", hiddenWordArr));
+                results.displayCurrentArray(hiddenWordArr);
 
                 while (attempts < maxAttempts && !hiddenWordArr.equals(wordArray)) {
 
@@ -49,9 +46,9 @@ public class HangMan {
                         System.out.println("Please enter a single character as your guess.");
                         continue;
                     }
-
+                    ArrayList<String> playerGuesses;
                     ArrayList<Integer> playerIndex;
-
+                    playerGuesses = results.handlePlayerGuess(playerGuess);
                     playerIndex = ValidateGuess.checkGuess(wordArray, hiddenWordArr, playerGuess);
 
                     if (!playerIndex.isEmpty()) {
@@ -62,17 +59,15 @@ public class HangMan {
                         attempts++;
                         System.out.println("Wrong guess.");
                     }
-                    System.out.println(String.join("", hiddenWordArr));
+                    results.displayCurrentArray(hiddenWordArr);
+                    results.displayCurrentArray(playerGuesses);
                     System.out.println("Attempts remaining: " + (maxAttempts - attempts));
                 }
-                if (hiddenWordArr.equals(wordArray)) {
-                    System.out.println("Congratulations! You've beaten the HangMan!");
-                } else {
-                    System.out.println("You've been caught by the hangman. Prepare to hang... ");
-                }
+                playerInteraction.displayGameCompletion(wordArray, hiddenWordArr);
+
             } else if (playerChoice.equals("2")) {
                 System.out.println("Thanks for playing");
-                break;
+                playing = false;
             }
         }
     }
