@@ -7,6 +7,7 @@ public class HangMan {
     private final ConvertWord converter;
     private final Results results;
     private final PlayerInteraction playerInteraction;
+    private final ValidateGuess validator;
     private boolean playing = true;
 
     public HangMan() {
@@ -14,6 +15,7 @@ public class HangMan {
         this.converter = new ConvertWord();
         this.results = new Results();
         this.playerInteraction = new PlayerInteraction();
+        this.validator = new ValidateGuess();
     }
 
     public void startGame() {
@@ -22,6 +24,9 @@ public class HangMan {
         ArrayList<String> hiddenWordArray;
         ArrayList<String> wordArray;
         ArrayList<Integer> playerIndex;
+
+        Words textConverter = new Words("/Users/nmp/development/java/hangman/src/words.txt");
+        textConverter.convertTextFileToWordList();
 
         System.out.println("\n");
         System.out.println("*************** Welcome to Hangman ***************");
@@ -51,8 +56,7 @@ public class HangMan {
 
                         String playerGuess = scanner.nextLine().toUpperCase();
 
-                        if (playerGuess.length() != 1) {
-                            System.out.println("Please enter a single character.");
+                        if (validator.handleGuessErrors(playerGuess, playerGuesses)){
                             continue;
                         }
 

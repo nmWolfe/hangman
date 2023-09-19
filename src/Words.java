@@ -1,32 +1,28 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
+
 
 public class Words {
 
-    private static ArrayList<String> words = new ArrayList<>();
+    private static ArrayList<String> words;
     private static Random rand = new Random();
+    private Scanner fileScan;
 
-    static {
-        words.add("BERSERK");
-        words.add("HUMDINGER");
-        words.add("GOLLUM");
-        words.add("ZAP");
-        words.add("TRIUMPH");
-        words.add("CHARCOAL");
-        words.add("LIMB");
-        words.add("CRASH");
-        words.add("ASBESTOS");
-        words.add("WISH");
-        words.add("FALLOUT");
-        words.add("DIRGE");
-        words.add("POT");
-        words.add("ORANGUTAN");
-        words.add("REGAL");
-        words.add("MAGIC");
-        words.add("YURT");
-        words.add("KARATE");
-        words.add("GRUNGE");
-        words.add("VOLATILE");
+    public void convertTextFileToWordList(){
+        while (fileScan.hasNext()){
+            words.add(fileScan.nextLine().toUpperCase());
+        }
+    }
+    public Words(String filePath){
+        try {
+            fileScan = new Scanner(new File(filePath));
+            words = new ArrayList<>();
+        } catch (FileNotFoundException e) {
+            e.getCause();
+        }
     }
 
     public static String generateRandomWord(){
