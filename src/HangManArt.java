@@ -1,31 +1,5 @@
-import java.util.ArrayList;
-
-public class Results {
-
-    private ArrayList<String> playerGuesses = new ArrayList<>();
-
-    public ArrayList<String> handlePlayerGuess(String letter) {
-        playerGuesses.add(letter);
-        return playerGuesses;
-    }
-
-    public void displayCurrentArray(ArrayList<String> wordArray) {
-        System.out.println(String.join("", wordArray));
-    }
-    public void displayCurrentGuesses(ArrayList<String> wordArray) {
-        System.out.println("Guesses: " + String.join("-", wordArray));
-    }
-
-    public void hangingMan(int wrongGuesses) {
-        String[] hangManDrawing = hangManDrawings[wrongGuesses - 1];
-        for (String line: hangManDrawing) {
-            System.out.println(line);
-        }
-    }
-
-
-    private final String[] hangMan1 = {
-            "****************************************",
+public enum HangManArt {
+    HANGMAN1("****************************************",
             "* -----------------",
             "* |               |",
             "* |               ",
@@ -36,8 +10,9 @@ public class Results {
             "* |               ",
             "* ----------------------------",
             "****************************************"
-    };
-    private final String[] hangMan2 = {
+    ),
+
+    HANMAN2(
             "****************************************",
             "* -----------------",
             "* |               |",
@@ -49,8 +24,9 @@ public class Results {
             "* |                ",
             "* ----------------------------",
             "****************************************"
-    };
-    private final String[] hangMan3 = {
+    ),
+
+    HANGMAN3(
             "****************************************",
             "* -----------------",
             "* |               |",
@@ -62,8 +38,8 @@ public class Results {
             "* |               ",
             "* ----------------------------",
             "****************************************"
-    };
-    private final String[] hangMan4 = {
+    ),
+    HANGMAN4(
             "****************************************",
             "* -----------------",
             "* |               |",
@@ -75,8 +51,8 @@ public class Results {
             "* |               ",
             "* ----------------------------",
             "****************************************"
-    };
-    private final String[] hangMan5 = {
+    ),
+    HANGMAN5(
             "****************************************",
             "* -----------------",
             "* |               |",
@@ -88,8 +64,8 @@ public class Results {
             "* |                ",
             "* ----------------------------",
             "****************************************"
-    };
-    private final String[] hangMan6 = {
+    ),
+    HANGMAN6(
             "****************************************",
             "* -----------------",
             "* |               |",
@@ -101,8 +77,8 @@ public class Results {
             "* |               ",
             "* ----------------------------",
             "****************************************"
-    };
-    private final String[] hangMan7 = {
+    ),
+    HANGMAN7(
             "****************************************",
             "* -----------------",
             "* |               |",
@@ -114,24 +90,30 @@ public class Results {
             "* |             R.I.P",
             "* ----------------------------",
             "****************************************"
-    };
-
-    private final String[] hangManEscaped = {
+    ),
+    HANGMAN_ESCAPED(
             "******************************************************************",
             "* ",
-            "* #######  #######   #######  #######  #####    #####   ##   ##     #",
-            "*  ##  ##   ##  ##   ##  ##   ##  ##   ##  ##  ##   ##   ## ##      #",
-            "*  ##       ##  ##   ##       ##       ##  ##  ##   ##  # ### #     #",
-            "*  ## ##    ## ##    ## ##    ## ##    ##  ##  ##   ##  ## # ##     #",
-            "*  ##       ## ##    ##       ##       ##  ##  ##   ##  ##   ##     #",
-            "*  ##       ##  ##   ##  ##   ##  ##   ##  ##  ##   ##  ##   ##  ",
-            "* ####     ###  ##  #######  #######  ######    #####   ##   ##     #",
+            "*  #######  #######   #######  #######  #####    #####   ##   ##     ##",
+            "*   ##  ##   ##  ##   ##  ##   ##  ##   ##  ##  ##   ##   ## ##         ##",
+            "*   ##       ##  ##   ##       ##       ##  ##  ##   ##  # ### #           ##",
+            "*   ## ##    ## ##    ## ##    ## ##    ##  ##  ##   ##  ## # ##              ##",
+            "*   ##       ## ##    ##       ##       ##  ##  ##   ##  ##   ##           ##",
+            "*   ##       ##  ##   ##  ##   ##  ##   ##  ##  ##   ##  ##   ##        ##",
+            "*  ####     ###  ##  #######  #######  ######    #####   ##   ##     ##",
             "* ",
             "******************************************************************"
-    };
+    );
 
-    private final String[][] hangManDrawings = {hangMan1, hangMan2, hangMan3, hangMan4, hangMan5, hangMan6, hangMan7};
+    private final String[] artwork;
 
+    HangManArt(String... artwork) {
+        this.artwork = artwork;
+    }
 
-}
-
+    public void display() {
+        for (String line : artwork) {
+            System.out.println(line);
+        }
+    }
+    }
