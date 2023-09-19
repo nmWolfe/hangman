@@ -4,7 +4,7 @@ public class PlayerInteraction {
 
     private final String[] startOptions = {
             "1 - Play a game of HangMan",
-            "2 - Read me the rules!!!",
+            "2 - Read me the rules",
             "3 - Quit"
     };
     private final String[] rules = {"****************************************",
@@ -32,6 +32,7 @@ public class PlayerInteraction {
                                       ArrayList<String> previousGuesses) {
         if (playerGuess.equals(currentWord)) {
             System.out.println("Congratulations! You've beaten the HangMan!");
+            HangManArt.HANGMAN_ESCAPED.display();
         } else {
             System.out.println("You've been caught by the hangman. Prepare to hang... ");
             System.out.println("The word you were looking for was ... " + String.join("", currentWord));
