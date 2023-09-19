@@ -21,7 +21,7 @@ public class Words {
             fileScan = new Scanner(new File(filePath));
             words = new ArrayList<>();
         } catch (FileNotFoundException e) {
-            e.getCause();
+            System.out.println("File not found" + e.getMessage());
         }
     }
 
