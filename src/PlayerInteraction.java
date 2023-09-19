@@ -14,8 +14,10 @@ public class PlayerInteraction {
         }
     }
 
-    public void displayGameCompletion(ArrayList<String> currentWord, ArrayList<String> playerGuess) {
-        if (playerGuess.equals(currentWord)){
+    public void displayGameCompletion(ArrayList<String> currentWord,
+                                      ArrayList<String> playerGuess,
+                                      ArrayList<String> previousGuesses) {
+        if (playerGuess.equals(currentWord)) {
             System.out.println("Congratulations! You've beaten the HangMan!");
         } else {
             System.out.println("You've been caught by the hangman. Prepare to hang... ");
@@ -23,5 +25,6 @@ public class PlayerInteraction {
         }
         gameUtil.clearStringArray(currentWord);
         gameUtil.clearStringArray(playerGuess);
+        gameUtil.clearStringArray(previousGuesses);
     }
 }

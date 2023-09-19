@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="993fcf1e-64ce-4a2d-a9f0-5ff868dfe755" name="Changes" comment="Updated ValidateGuess to allow for multiple occurrences">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameUtilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HangMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlayerInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerInteraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.java" afterDir="false" />
     </list>

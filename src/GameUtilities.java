@@ -6,8 +6,4 @@ public class GameUtilities {
         array.clear();
     }
 
-    public void clearNumArray(ArrayList<Integer> array) {
-        array.clear();
-    }
-
 }
