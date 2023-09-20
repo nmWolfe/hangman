@@ -43,7 +43,7 @@ public class HangMan {
             switch (playerChoice) {
                 case "1":
 
-                    System.out.println("Ok, let's play. ");
+                    System.out.println("************* OK! Let's Play Hangman *************");
 
                     results.displayCurrentArray(hiddenWordArray);
 

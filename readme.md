@@ -20,7 +20,7 @@ To run the Hangman game, you'll need Java installed on your computer. Follow the
 
 4. Compile the Java code:
    ```bash
-   javac HangmanGame.java
+   javac hangmangame.java
    ```
 
 5. Run the game:

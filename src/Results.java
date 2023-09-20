@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Results {
 
-    private ArrayList<String> playerGuesses = new ArrayList<>();
+    private final ArrayList<String> playerGuesses = new ArrayList<>();
 
     public ArrayList<String> handlePlayerGuess(String letter) {
         playerGuesses.add(letter);
