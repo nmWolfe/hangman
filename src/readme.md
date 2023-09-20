@@ -71,6 +71,6 @@ Here are some important rules and guidelines for playing Hangman:
 
 If you decide to quit the game, simply select the "quit" option from the main menu. This will exit the game.
 
-Enjoy playing Hangman and challenge your word-guessing skills! If you have any questions or feedback, feel free to contact us.
+Enjoy playing Hangman and challenge your word-guessing skills! If you have any questions or feedback, feel free to contact me.
 
 Have fun!
