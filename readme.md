@@ -1,6 +1,6 @@
 # Hangman Game in Java
 
-Welcome to the Hangman game implemented in Java! This classic word-guessing game will test your knowledge and vocabulary. Follow the instructions below to play, learn the rules, or quit the game.
+Welcome to my Hangman game implemented with Java! This classic word-guessing game will test your knowledge and vocabulary. Follow the instructions below to play, learn the rules, or quit the game.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
