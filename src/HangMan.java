@@ -29,6 +29,15 @@ public class HangMan {
         textConverter.convertTextFileToWordList();
 
         System.out.println("\n");
+        System.out.println("    )\n" +
+                " ( /(\n" +
+                " )\\())    )         (  (     )       )\n" +
+                "((_)\\  ( /(   (     )\\))(   (     ( /(   (\n" +
+                " _((_) )(_))  )\\ ) ((_))\\   )\\  ' )(_))  )\\ )\n" +
+                "| || |((_)_  _(_/(  (()(_)_((_)) ((_)_  _(_/(\n" +
+                "| __ |/ _` || ' \\))/ _` || '  \\()/ _` || ' \\))\n" +
+                "|_||_|\\__,_||_||_| \\__, ||_|_|_| \\__,_||_||_|\n" +
+                "                   |___/");
         System.out.println("*************** Welcome to Hangman ***************");
 
         while (playing) {
